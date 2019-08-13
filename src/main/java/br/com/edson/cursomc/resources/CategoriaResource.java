@@ -14,7 +14,6 @@ import br.com.edson.cursomc.domain.Categoria;
 @RequestMapping(value = "/categorias")
 public class CategoriaResource {
 
-
 	@RequestMapping(method = RequestMethod.GET)
 	public List<Categoria> listar() {
 
@@ -29,6 +28,5 @@ public class CategoriaResource {
 		return lista;
 
 	}
-	
 
 }
