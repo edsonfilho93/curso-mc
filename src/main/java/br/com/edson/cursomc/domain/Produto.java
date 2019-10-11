@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Produto implements Serializable{
 	
@@ -29,6 +31,7 @@ public class Produto implements Serializable{
 	 * joinColumns = @JoinColumn(name = "produto_id")--> define qual vai ser a chave estrangeira
 	 *  inverseJoinColumns = @JoinColumn(name="categoria_id") --> define qual vai ser a outra chave estrangeira
 	 */
+	@JsonBackReference // tem que estar no outro lado da relação, omitindo assim o que já foi buscado
 	@ManyToMany
 	@JoinTable(name = "PRODUTO_CATEGORIA",
 	joinColumns = @JoinColumn(name = "produto_id"),
@@ -36,7 +39,7 @@ public class Produto implements Serializable{
 	)
 	
 	private List<Categoria> categorias = new ArrayList<Categoria>();
-
+	
 	public Produto() {
 	}
 
