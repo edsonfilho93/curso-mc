@@ -33,7 +33,7 @@ public enum TipoCliente {
 		if (tipoCliente != null) {
 			return tipoCliente;
 		} else {
-			throw new IllegalArgumentException("Id inválido: " + codigo + ", não corresponde a nenhum tipo");
+			throw new IllegalArgumentException("Id inválido: " + codigo);
 		}
 	}
 }
