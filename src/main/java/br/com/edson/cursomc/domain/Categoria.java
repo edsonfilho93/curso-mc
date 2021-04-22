@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.Data;
 
 @Entity
 public class Categoria implements Serializable {

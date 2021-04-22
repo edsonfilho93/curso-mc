@@ -15,9 +15,11 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
+.gradle
 *.iws
 *.iml
 *.ipr
+
 
 ### NetBeans ###
 /nbproject/private/
