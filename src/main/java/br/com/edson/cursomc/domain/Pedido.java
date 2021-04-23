@@ -1,5 +1,6 @@
 package br.com.edson.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -18,6 +19,8 @@ public class Pedido implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @JsonFormat(pattern="dd/MM/yyyy HH:mm")
     private Date instante;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "pedido")

@@ -1,5 +1,6 @@
 package br.com.edson.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +14,7 @@ import java.io.Serializable;
 @Setter
 public class ItemPedido implements Serializable {
 
+    @JsonIgnore
     @EmbeddedId
     private ItemPedidoPK id = new ItemPedidoPK();
 
@@ -31,6 +33,7 @@ public class ItemPedido implements Serializable {
         this.preco = preco;
     }
 
+    @JsonIgnore
     public Pedido getPedidos() {
         return id.getPedido();
     }
